@@ -11,8 +11,8 @@ import { environment } from 'src/environments/environment.development';
 })
 export class HeaderComponent {
   
-  softwareProjects = new Menu("Software projects", [new Link("Visualization of pathfinding algorithms", "/pathFinding"),
-  new Link("Visualization of sorting algorithms", "/sorting"),
+  softwareProjects = new Menu("Software projects", [new Link("Visualization of pathfinding algorithms", "pathFinding"),
+  new Link("Visualization of sorting algorithms", "sorting"),
 ]);
 
   baseUrl = environment.baseUrl
