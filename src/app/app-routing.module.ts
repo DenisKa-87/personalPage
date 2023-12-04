@@ -6,8 +6,8 @@ import { InprogressComponent } from './inprogress/inprogress.component';
 
 const routes: Routes = [
   {path: "", component: HomepageComponent},
-  {path: "personalPage/pathFinding", component: PathFindingComponent},
-  { path: 'personalPage/sorting', component:InprogressComponent},
+  {path: "pathFinding", component: PathFindingComponent},
+  { path: 'sorting', component:InprogressComponent},
   { path: '**', component:HomepageComponent, pathMatch: 'full' }
   
  

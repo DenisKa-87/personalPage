@@ -89,7 +89,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              {"deploy": "ng deploy --base-href=https://deniska-87.github.io/personalPage/"}
+            ]
           }
         }
       }
