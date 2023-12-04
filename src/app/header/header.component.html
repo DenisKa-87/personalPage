@@ -1,0 +1,15 @@
+<div class="header">
+    
+    <h2 id="title" style="margin-left: 5vw;"><a href="./"> <img src="./assets/face.gif"> Denis K. Personal page</a></h2>
+<div class="menuContainer">
+    <div class="menus" *ngFor="let menu of menus">
+        <a class="dropdown">{{menu.name}}</a>
+            <div class="menuItems">
+                <ul>
+                    <li *ngFor="let item of menu.links"><a href="{{item.link}}">{{item.name}}</a></li>
+                </ul>
+            </div>
+    </div>
+</div>
+
+</div>

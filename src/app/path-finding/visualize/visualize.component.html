@@ -1,0 +1,27 @@
+<div class="gridContainer">
+    <div class="menus">
+        <button (click)="maze.generateRandomField()">Random maze</button>
+        <button (click)="setStartAndFinish()" [ngStyle]="startFinMode && {'background-color': 'orange'}">Set start/finish</button>
+        
+        
+        <select name="SearchType" id="searchType" #typeSelect [(ngModel)]="type" (change)="onChange(typeSelect.value)">
+            <option value="depthFirst">
+                Depth first search
+            </option>
+            <option value="breadthFirst">
+                Breadth first search
+            </option>
+        </select>
+        <button class="button-search" (click)="search.search(0)">Search</button>
+        <button class="button-clear"  (click)="clearMaze()">Clear field</button>
+    </div>
+    <div class="row" *ngFor="let row of maze.field">
+        <div class="node" *ngFor="let node of row"
+            (click)="startFinMode ? maze.setStartAndFinish(node) :  maze.toggleWall(node)" [ngStyle]="node.isWall && { 'background-color': 'black','border-color': 'black', 'transition-duration': '1000ms'} 
+        || node.isStart && ({'background-color': 'green', 'transition-duration': '1000ms'})
+        || node.isGoal && {'background-color': 'red', 'transition-duration': '1000ms'}
+        || (node.showPass) && {'background-color': 'orange', 'transition-duration': '1000ms'}
+        " [ngClass]="(node.visited && !node.isStart) && 'node-visited node'" [ngClass]="node.showPass && 'node'">
+        </div>
+    </div>
+</div>

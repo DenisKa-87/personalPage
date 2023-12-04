@@ -1,0 +1,39 @@
+.homeContainer{
+    background-color: antiquewhite;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+
+}
+.textcontainer{
+    width: 40vw;
+    height: 40vh;
+    border:  2px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 5px 5px 5px black;
+    padding: 1rem;
+    
+    
+}
+.videoWrap{
+    display: flex;
+    height: 75vh;
+    width: 100vw;
+    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+   
+}
+iframe{
+    pointer-events: none;
+    height: 900px;
+    width: 100%;
+    
+    
+}

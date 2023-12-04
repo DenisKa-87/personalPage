@@ -1,0 +1,104 @@
+
+.gridContainer{
+    --containerSize: 60vw;
+    width: var(--containerSize);
+   
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.row{
+    display: flex;
+}
+
+.node{
+    box-sizing: border-box;
+    border: solid;
+    border-color: aqua;
+    border-width: 0.5px;
+    background-color: white;
+    width: 100%;
+    aspect-ratio: 1/1;  
+    
+}
+.menus{
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 2rem;
+}
+@media (max-width: 1200px) {
+  .menus{
+    flex-wrap: wrap;
+  }
+}
+.menus select{
+  font-size: 2vh;
+ 
+}
+
+
+
+.menus button{
+  
+  border-radius: 10px;
+  font-size: 2vh;
+
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.menus .button-search{
+  background-color: #07e607;
+}
+.menus .button-search:hover{
+  background-color: #035b03;
+  color: white;
+}
+
+.menus .button-clear{
+  
+  background-color: #e12007;
+}
+.menus .button-clear:hover{
+  background-color: #b11905;
+  color: white;
+}
+.node-visited{
+    animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  z-index: 0;
+}
+
+@keyframes visitedAnimation {
+    0% {
+      transform: scale(0.3);
+      background-color: rgba(0, 0, 66, 0.75);
+      border-radius: 100%;
+    }
+  
+    50% {
+      background-color: rgba(17, 104, 217, 0.75);
+    }
+  
+    75% {
+      transform: scale(1.2);
+      background-color: rgba(0, 217, 159, 0.75);
+    }
+  
+    100% {
+      transform: scale(1);
+      background-color: rgba(0, 190, 218, 0.75);
+    }
+  }

@@ -1,0 +1,12 @@
+.mainContainer{
+    background-color: antiquewhite;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}

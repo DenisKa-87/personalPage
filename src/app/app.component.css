@@ -1,0 +1,11 @@
+.headerWrapper{
+    height: 10vh;
+}
+.outletWrapper{
+    --contentHeight: auto;
+    
+}
+.footerWrapper{
+    position: absolute;
+    top: calc(var(--contentHeight) + 10vh);
+}
