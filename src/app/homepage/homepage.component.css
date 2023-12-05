@@ -26,9 +26,15 @@
 }
 @media (max-width: 1200px) {
     .homeContainer{
+        padding-top: 3vh;
+        padding-bottom: 3vh;
       flex-direction: column;
+      
+      align-items: center;
+      justify-content: space-around;
     }
     .textframe{
         width: 80vw;
+
     }
 }

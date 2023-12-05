@@ -21,6 +21,7 @@ a{
 .header img{
     height: 8vh;
     width: 8vh;
+    flex-shrink: 10;
 }
 .header a{
     display: flex;
@@ -33,8 +34,12 @@ a{
 #title{
     cursor: pointer;
     display: flex;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#title a{
+    flex-shrink: 20;
 }
 
 .menuContainer{

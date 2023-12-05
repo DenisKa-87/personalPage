@@ -29,6 +29,7 @@ a{
     .footer{
       flex-direction: column;
       gap: 1vh;
+      height: auto;
     }
 }
 
