@@ -1,3 +1,4 @@
+ 
 a{
     text-decoration: none;
     cursor: pointer;
@@ -31,6 +32,9 @@ a{
 
 #title{
     cursor: pointer;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .menuContainer{
@@ -38,14 +42,14 @@ a{
     display: flex;
 }
 
-/* @media(max-width: 600px) {
+ /* @media(max-width: 600px) {
     .header{
 
     }
     .menuContainer{
         flex-direction: column;
     }
-} */
+}  */
 
 .menus{
     margin-left: 2vw;
@@ -73,8 +77,21 @@ a{
     display: none;
     position: absolute;
     z-index: 1;
-    background-color: rgba(82, 84, 86, 0.7);
+    background-color: rgba(82, 84, 86);
     border-radius: 1rem;
+}
+#menuDropdown{
+    display: none;
+}
+@media (max-width: 1200px) {
+    .menus{
+      display: none;
+    }
+    #menuDropdown{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
 
 
@@ -94,7 +111,7 @@ a{
     
 }
 .menuItems ul>li:hover{
-    background-color: rgba(82, 84, 86, 0.9); ;
+    background-color: rgb(32, 33, 34); ;
 }
 
 .menuItems ul li a{
@@ -121,4 +138,29 @@ li:last-child{
     display: flex;
     flex-direction: column;
 }
+
+ .drmenuItems a{
+    display: none;
+
+} 
+.drmenuItems a{
+    
+    color: black;
+} 
+
+#dropdown-animated{
+    overflow: visible;    
+}
+
+#itemLink{
+    color: black;
+}
+ #dropdown-animated:hover .drmenuItems a{
+    display: flex;
+    position: relative;
+    left: 100px;
+    z-index: 1;
+    
+}
+
 

@@ -3,4 +3,38 @@
     background-color: rgb(40, 41, 41);
     position: absolute;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
 }
+
+a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    color: white;
+    gap: .5rem;
+}
+.iconscontainer{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1vh;
+    align-items: flex-start;
+}
+@media (max-width: 600px) {
+    .footer{
+      flex-direction: column;
+      gap: 1vh;
+    }
+}
+
+a:hover{
+    color: orange;
+}
+a:hover svg {
+        fill: orange;
+    }

@@ -12,10 +12,10 @@
                 Breadth first search
             </option>
         </select>
-        <button class="button-search" (click)="search.search(0)">Search</button>
+        <button class="btn btn-primary" (click)="search.search(0)">Search</button>
         <button class="button-clear"  (click)="clearMaze()">Clear field</button>
     </div>
-    <div class="row" *ngFor="let row of maze.field">
+    <div class="datarow" *ngFor="let row of maze.field">
         <div class="node" *ngFor="let node of row"
             (click)="startFinMode ? maze.setStartAndFinish(node) :  maze.toggleWall(node)" [ngStyle]="node.isWall && { 'background-color': 'black','border-color': 'black', 'transition-duration': '1000ms'} 
         || node.isStart && ({'background-color': 'green', 'transition-duration': '1000ms'})

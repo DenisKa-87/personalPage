@@ -1,15 +1,45 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="header">
-    
+
     <h2 id="title" style="margin-left: 5vw;"><a href="./"> <img src="./assets/face.gif"> Denis K. Personal page</a></h2>
-<div class="menuContainer">
-    <div class="menus" *ngFor="let menu of menus">
-        <a class="dropdown">{{menu.name}}</a>
+    <div class="menuContainer">
+        <div class="menus" *ngFor="let menu of menus">
+            <a class="dropdown">{{menu.name}}</a>
             <div class="menuItems">
                 <ul>
                     <li *ngFor="let item of menu.links"><a href="{{baseUrl}}{{item.link}}/">{{item.name}}</a></li>
                 </ul>
             </div>
-    </div>
-</div>
+        </div>
 
-</div>
+        <!-- <div class="menuContainer">
+            <div class="menus" *ngFor="let menu of menus">
+                <a class="dropdown">{{menu.name}}</a>
+                    <div class="menuItems">
+                        <ul>
+                            <li *ngFor="let item of menu.links"><a href="{{baseUrl}}{{item.link}}/">{{item.name}}</a></li>
+                        </ul>
+                    </div>
+            </div>
+        </div> -->
+
+        <div id="menuDropdown" class="btn-group" dropdown>
+            <button id="button-animated" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                aria-controls="dropdown-animated">
+                Button dropdown <span class="caret"></span>
+            </button>
+            <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu" role="menu"
+                aria-labelledby="button-animated">
+                <div *ngFor="let menu of menus">
+                    <li role="menuitem" class="dropdown-item"><a id="itemLink" href="#">{{menu.name}}</a></li>
+                    <div *ngFor="let item of menu.links" class="drmenuItems">
+                        
+                            <a href="{{baseUrl}}{{item.link}}/">{{item.name}}</a>
+                        
+                    </div>
+                </div>
+
+
+            </ul>
+        </div>
+    </div>

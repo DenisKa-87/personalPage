@@ -1,5 +1,5 @@
 .homeContainer{
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     min-height: 75vh;
     display: flex;
     justify-content: center;
@@ -9,31 +9,26 @@
     gap: 5vw;
 
 }
-.textcontainer{
+.textframe{
     width: 40vw;
-    height: 40vh;
+    height: auto;
     border:  2px;
     border-style: solid;
     border-color: black;
     box-shadow: 5px 5px 5px black;
     padding: 1rem;
-    
-    
+    border-radius: 10px;
 }
-.videoWrap{
-    display: flex;
-    height: 75vh;
-    width: 100vw;
-    margin-top: 0;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-   
+
+.textframe p{
+    font-size: 1.1rem;
+    font-family: 'Times New Roman';
 }
-iframe{
-    pointer-events: none;
-    height: 900px;
-    width: 100%;
-    
-    
+@media (max-width: 1200px) {
+    .homeContainer{
+      flex-direction: column;
+    }
+    .textframe{
+        width: 80vw;
+    }
 }

@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { Menu } from '../models/menu';
 import { Link } from '../models/link';
 import { environment } from 'src/environments/environment.development';
+import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  
+  providers: [{ provide: BsDropdownConfig, useValue: { isAnimated: true, autoClose: true } }]
 })
 export class HeaderComponent {
   
@@ -16,7 +17,7 @@ export class HeaderComponent {
 ]);
 
   baseUrl = environment.baseUrl
-
+  isCollapsed = true;
   modeling = new Menu("3d modeling", []);
   architecture = new Menu("Architecture", []);
 
