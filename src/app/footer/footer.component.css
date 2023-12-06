@@ -25,13 +25,13 @@ a{
     margin-top: 1vh;
     align-items: flex-start;
 }
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .footer{
       flex-direction: column;
       gap: 1vh;
       height: auto;
     }
-}
+} */
 
 a:hover{
     color: orange;

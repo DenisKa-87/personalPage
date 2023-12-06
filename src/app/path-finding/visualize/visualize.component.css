@@ -27,16 +27,14 @@
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1vw;
   padding-left: 2rem;
+  padding-bottom: 2rem;
+  flex-wrap: wrap;
 }
-@media (max-width: 1200px) {
-  .menus{
-    flex-wrap: wrap;
-  }
-}
+
 .menus select{
-  font-size: 2vh;
+  font-size: 2vw;
  
 }
 
@@ -45,7 +43,7 @@
 .menus button{
   
   border-radius: 10px;
-  font-size: 2vh;
+  font-size: 1.5vw;
 
 }
 

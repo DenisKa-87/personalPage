@@ -24,10 +24,13 @@
         </div> -->
 
         <div id="menuDropdown" class="btn-group" dropdown>
-            <button id="button-animated" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
-                aria-controls="dropdown-animated">
-                Button dropdown <span class="caret"></span>
-            </button>
+            <!-- <button id="button-animated" dropdownToggle 
+                aria-controls="dropdown-animated">-->
+                <svg id="button-animated" dropdownToggle aria-controls="dropdown-animated" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+                <!-- <span class="caret"></span> -->
+            <!-- </button> -->
             <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu" role="menu"
                 aria-labelledby="button-animated">
                 <div *ngFor="let menu of menus">
