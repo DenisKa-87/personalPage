@@ -100,8 +100,12 @@ export class Maze {
     path: IStack<Gridnode>) {
     //currentPlace.visited = true
     for (var i = -1; i < 2; i++) {
+      if(currentPlace.Y + i < 0 || currentPlace.Y + i > this.field.length-1)
+        continue;
       for (var j = -1; j < 2; j++) {
         if (Math.abs(j) === Math.abs(i))
+          continue;
+        if(currentPlace.X + j < 0 || currentPlace.X + j > this.field[0].length-1)
           continue;
         var nextPoint = this.field[currentPlace.Y + i][currentPlace.X + j]
         //console.log(nextPoint.Y + " " + nextPoint.X + nextPoint.isWall)

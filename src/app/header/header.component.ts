@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Menu } from '../models/menu';
 import { Link } from '../models/link';
 import { environment } from 'src/environments/environment.development';
@@ -11,17 +11,27 @@ import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
   providers: [{ provide: BsDropdownConfig, useValue: { isAnimated: true, autoClose: true } }]
 })
 export class HeaderComponent {
+  // ngOnInit(): void {
+  //   //this.isCollapsed = window.innerWidth < 1200
+  // }
+
+//   @HostListener('window:resize', ['$event'])
+// onResize(event) {
+//   this.isCollapsed = window.innerWidth < 1200;
+// }
   
   softwareProjects = new Menu("Software projects", [new Link("Visualization of pathfinding algorithms", "pathFinding"),
   new Link("Visualization of sorting algorithms", "sorting"),
 ]);
 
   baseUrl = environment.baseUrl
-  isCollapsed = true;
+ 
   modeling = new Menu("3d modeling", []);
   architecture = new Menu("Architecture", []);
 
   menus: Menu[] = [this.softwareProjects, this.modeling, this.architecture]
+
+  //isCollapsed = false;
   
   
   check(id: string){

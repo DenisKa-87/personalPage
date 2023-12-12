@@ -3,8 +3,22 @@ body{
     margin: 0px;
     padding: 0px;
     margin-top: 0px;
-    background-image: linear-gradient(45deg, rgb(84, 203, 243), white);
+    background-image: linear-gradient(to top, rgb(187, 190, 191), white);
 }
 p{
     margin: 0px;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Poppins', sans-serif;
+}
+.dropdown-menu-right {
+    right: 0 !important;
+    left: auto !important; 
+}
+
+.text-gradient-primary {
+    color: #0089f7 !important;
+    background: linear-gradient(to top right, #0089F7 0%, #09B4FD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
