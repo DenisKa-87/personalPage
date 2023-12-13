@@ -8,7 +8,6 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PathFindingComponent } from './path-finding/path-finding.component';
 import { VisualizeComponent } from './path-finding/visualize/visualize.component';
-import { FourofourComponent } from './fourofour/fourofour.component';
 import { InprogressComponent } from './inprogress/inprogress.component';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { AlertModule,AlertConfig } from 'ngx-bootstrap/alert';
@@ -27,7 +26,6 @@ import { BsDropdownModule,BsDropdownConfig } from 'ngx-bootstrap/dropdown';
     FooterComponent,
     PathFindingComponent,
     VisualizeComponent,
-    FourofourComponent,
     InprogressComponent
   ],
   imports: [
