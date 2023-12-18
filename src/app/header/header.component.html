@@ -3,27 +3,31 @@
 
     <h2 id="title" style="margin-left: 5vw;" class="text-gradient-primary"><a href="./"> Denis K. Personal page</a></h2>
     <div class="menuContainer">
-        <div class="menus" *ngFor="let menu of menus">
+        <div class="headerMenu" *ngFor="let menu of menus">
             <div class="btn-group" dropdown>
-                <a id="mainDropdown" class="dropdown-toggle" dropdownToggle aria-controls="dropdownNested">{{menu.name}}</a>
-                
-                    <ul id="dropdownNested" aria-labelledby="mainDropdown" *dropdownMenu role="menu" class="dropdown-menu">
-                        <li class="dropdown" role="menuitem" *ngFor="let item of menu.links"><a  href="{{baseUrl}}{{item.link}}/">{{item.name}}</a></li>
-                    </ul>
-                
+                <a id="mainDropdown"  dropdownToggle
+                    aria-controls="dropdownNested" href="#{{menu.link.link}}">{{menu.name}} </a>
+
+                <!-- <ul id="dropdownNested" aria-labelledby="mainDropdown" *dropdownMenu role="menu" class="dropdown-menu">
+                    <li class="dropdown" role="menuitem" *ngFor="let item of menu.childrenLinks"><a
+                            href="{{baseUrl}}{{item.link}}/">{{item.name}}</a></li>
+                </ul> -->
+
             </div>
         </div>
-        
-             <div id="menuDropdown" class="btn-group" dropdown >
-                  <svg id="mainDropdown" class="dropdown-toggle" dropdownToggle aria-controls="dropdownNested" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-                  </svg>
-                    <ul id="dropdownNested" aria-labelledby="mainDropdown "  *dropdownMenu role="menu" 
-                    class="dropdown-menu dropdown-menu-right"
-                    aria-labelledby="mainDropdown" >
-                        <li role="menuitem"  *ngFor="let menu of menus"><a class="dropdown" href="#">{{menu.name}}</a></li>
-                    </ul>
-             </div>
-             
-     
+
+        <div id="menuDropdown" class="btn-group" dropdown>
+            <svg id="mainDropdown" class="dropdown-toggle" dropdownToggle aria-controls="dropdownNested"
+                xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+            <ul id="dropdownNested" aria-labelledby="mainDropdown " *dropdownMenu role="menu"
+                class="dropdown-menu dropdown-menu-right" aria-labelledby="mainDropdown">
+                <li role="menuitem" *ngFor="let menu of menus"><a class="dropdown" href="#{{baseUrl}}{{menu.link.link}}/">{{menu.name}}</a></li>
+            </ul>
+        </div>
+
+
     </div>

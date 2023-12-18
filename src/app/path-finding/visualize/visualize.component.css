@@ -1,75 +1,7 @@
 
-.gridContainer{
-    --containerSize: 60vw;
-    width: var(--containerSize);
-   
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.datarow{
-    display: flex;
-}
-
-.node{
-    box-sizing: border-box;
-    border: solid;
-    border-color: aqua;
-    border-width: 0.5px;
-    background-color: white;
-    width: 100%;
-    aspect-ratio: 1/1;  
-    
-}
-.menus{
-  height: 10vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 1vw;
-  padding-left: 2rem;
-  padding-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.menus select{
-  font-size: 2vw;
- 
-}
-
-
-
-.menus button{
-  
-  border-radius: 10px;
-  font-size: 1.5vw;
-
-}
-
-button:hover{
-  cursor: pointer;
-}
-
-.menus .button-search{
-  background-color: #07e607;
-}
-.menus .button-search:hover{
-  background-color: #035b03;
-  color: white;
-}
-
-.menus .button-clear{
-  
-  background-color: #e12007;
-}
-.menus .button-clear:hover{
-  background-color: #b11905;
-  color: white;
-}
 .node-visited{
     animation-name: visitedAnimation;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-delay: 0;
   animation-direction: alternate;
@@ -100,3 +32,4 @@ button:hover{
       background-color: rgba(0, 190, 218, 0.75);
     }
   }
+

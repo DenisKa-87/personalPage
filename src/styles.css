@@ -1,19 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
-body{
+html{
+  max-width:100vw;
+  margin: 0px;
+}
+body {
     margin: 0px;
     padding: 0px;
     margin-top: 0px;
-    background-image: linear-gradient(to top, rgb(187, 190, 191), white);
+    background-image: linear-gradient(to top, rgb(232, 235, 236), white);
+    max-width: 100%;
 }
-p{
+
+p {
     margin: 0px;
 }
-h1, h2, h3, h4, h5, h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Poppins', sans-serif;
 }
+
 .dropdown-menu-right {
     right: 0 !important;
-    left: auto !important; 
+    left: auto !important;
 }
 
 .text-gradient-primary {
@@ -21,4 +33,114 @@ h1, h2, h3, h4, h5, h6{
     background: linear-gradient(to top right, #0089F7 0%, #09B4FD 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  max-width: 100%;
+}
+.postContainer {
+    /* background-color: antiquewhite; */
+    background-image: linear-gradient(to top, rgb(232, 235, 236), white);
+    min-height: 75vh;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    scroll-margin-top: 10vh;
+}
+
+@media (max-width: 1200px) {
+    .mainContainer {
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+
+
+.gridContainer{
+    --containerSize: 60vw;
+    width: var(--containerSize);
+   
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.datarow{
+    display: flex;
+}
+
+.node{
+    box-sizing: border-box;
+    border: solid;
+    border-color: aqua;
+    border-width: 0.5px;
+    background-color: white;
+    width: 100%;
+    aspect-ratio: 1/1;  
+    
+}
+.menus{
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  flex-wrap: wrap;
+}
+select, label{
+  display: block;
+
+}
+.menus select{
+  font-size: 2vh;
+ 
+}
+
+
+
+.menus button{
+  
+  border-radius: 10px;
+  font-size: 1.5vh;
+
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.menus .button-search{
+  background-color: #07e607;
+}
+.menus .button-search:hover{
+  background-color: #035b03;
+  color: white;
+}
+
+.menus .button-clear{
+  
+  background-color: #e12007;
+}
+.menus .button-clear:hover{
+  background-color: #b11905;
+  color: white;
+}
+@media (max-width: 1000px){
+  .gridContainer{
+    --containerSize: 100vw;
+  }
 }

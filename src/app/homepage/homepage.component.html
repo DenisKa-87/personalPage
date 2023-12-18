@@ -1,46 +1,31 @@
-<div class="homeContainer">
-        <div class="carouselFrame">
-            <h3 class="text-gradient-primary">Some facts about me:</h3>
-            <carousel [isAnimated]="true" [noWrap]="false" class="text-lg-center">
-                <slide>
-                    <!-- <div class="myslide" style="background-image: url('./assets/family.png');"></div> -->
-                  <img src="./assets/family.png" alt="family" class="img-fluid">
-                  <div class="carousel-caption">
-                    <h3>I'm a family guy!</h3>
-                  </div>
-                </slide>
-                <slide>
-                  <!-- <div class="myslide" style="background-image: url('./assets/work.png');"></div> -->
-                  <img src="./assets/work.png" alt="work" class="img-fluid " >
-                  <div class="carousel-caption ">
-                    <h3>I used to work as a land surveyor.</h3>
-                  </div>
-                </slide>
-                <slide>
-                  <!-- <div class="myslide" style="background-image: url('./assets/dog.png');"></div> -->
-                  <img src="./assets/dog.png" alt="dog" class="img-fluid ">
-                  <div class="carousel-caption ">
-                    <h3>I have a dog. He is a good boy!</h3>
-                  </div>
-                </slide>
-                <slide>
-                  <!-- <div class="myslide" style="background-image: url('./assets/mountain.png');"></div> -->
-                    <img src="./assets/mountain.png" alt="travel" class="img-fluid ">
-                    <div class="carousel-caption">
-                      <h3>We like to travel together!l</h3>
-                    </div>
-                  </slide>
-              </carousel>
-            </div>
-        <div class="textframe">
-            <h1 style="text-align: center;" class="text-gradient-primary">Greetings!</h1>
-            <h2> <p>
-                Welcome to my ongoing coding adventure! <br> I'm Denis, a self-taught software enthusiast, navigating the transition from civil engineering to professional software development.
-                <br><p> Here, you'll discover a collection of my pet projects, showcasing my evolving skills in C#, JavaScript, HTML, and CSS.</p>
+<div class="mainContainer">
+  <div class="postContainer">
+    <div class="textframe">
+      <h1 style="text-align: center;" class="text-gradient-primary">Greetings!</h1>
+      <h5>
         
-                As a perpetual learner, I've independently delved into programming, embracing adaptability and nurturing a lifelong passion for innovation. Explore my projects to witness a blend of thoughtful problem-solving in C# applications and a creative touch in JavaScript, HTML, and CSS creations.
+          Welcome to my ongoing coding adventure! <br> I'm Denis, a self-taught software enthusiast, navigating the
+          transition from civil engineering to professional software development.
+          <br>
+          Here, you'll discover a collection of my pet projects, showcasing my evolving skills in C#, JavaScript,
+          HTML, and CSS.
+          <br>
+          As a perpetual learner, I've independently delved into programming, embracing adaptability and nurturing a
+          lifelong passion for innovation. Explore my projects to witness a blend of thoughtful problem-solving in C#
+          applications and a creative touch in JavaScript, HTML, and CSS creations.
+          <br>
+          I'm excited to contribute my ever-growing skills and unwavering dedication to a dynamic software development
+          team. Let's connect and explore how my unique background, combined with my perpetual learning mindset, can
+          bring continuous value to your projects!
         
-                I'm excited to contribute my ever-growing skills and unwavering dedication to a dynamic software development team. Let's connect and explore how my unique background, combined with my perpetual learning mindset, can bring continuous value to your projects!</p></h2>
-        </div>
-</div>
+      </h5>
+    </div>
+  </div>
 
+  <div id="programmingProjects"  class="postContainer">
+    <app-list-of-software-projects></app-list-of-software-projects>
+  </div>
+  <div id="aboutMe"  class="postContainer">
+   <app-about-me></app-about-me>
+  </div>
+</div>

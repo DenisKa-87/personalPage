@@ -9,6 +9,7 @@ export class UnWeightedSearch {
     maze: Maze
     path: IStack<Gridnode>
     goalIsFound = false;
+    alertShown = false;
     constructor(maze: Maze, type: string) {
         this.maze = maze;
 
@@ -24,14 +25,20 @@ export class UnWeightedSearch {
         if (this.goalIsFound)
             return;
         if (i === 0) {
+            if(!this.maze.startIsSet || !this.maze.finishIsSet){
+                alert("Please set start and finish!")
+                return;
+            }
             this.path.push(this.maze.start)
         }
-
-
         if (this.path.size() === 0 && !this.goalIsFound) {
-            alert('There is no way' + " " + this.path.size())
+            if(!this.alertShown){
+                alert("There is no way!")
+                this.alertShown = true;
+            }
             return;
         }
+        
 
         var currentPlace = this.path.pop();
         currentPlace.visited = true;
@@ -54,8 +61,6 @@ export class UnWeightedSearch {
             return;}
 
         setInterval(() => finish.showPass = true, 50*i)
-        
-        console.log("backtraking")
         i++;
         this.showPass(finish.from,i)
     }

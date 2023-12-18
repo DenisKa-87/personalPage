@@ -9,14 +9,15 @@ a{
     height: var(--header-height);
     background-color: rgb(42, 46, 49);
     margin-bottom: 0;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     position: fixed;
     top: 0;
     display: flex;
     color: whitesmoke;
     align-items: center;
     justify-content: space-around;
-    z-index: 1;
+    z-index: 3;
 }
 .header img{
     height: 8vh;
@@ -56,7 +57,7 @@ a{
     }
 }  */
 
-.menus{
+.headerMenu{
     margin-left: 2vw;
     margin-top: auto;
     margin-bottom: auto;
@@ -65,7 +66,7 @@ a{
 
 }
 
-.menus > a{
+.headerMenu > a{
     
     --menu-height: 1.1rem;
     font-size: var(--menu-height);
@@ -112,9 +113,16 @@ a{
 .dropdown-menu li:hover{
     background-color: rgb(69, 63, 63);
 }
+#mainDropdown:hover {
+    text-shadow: whitesmoke .1px .1px 0, whitesmoke -.1px -.1px 0, 
+    whitesmoke -.1px .1px 0, whitesmoke .1px -.1px 0;
+    position: relative;
+    bottom: 2px;
+    
+}
 
 @media (max-width: 1200px) {
-    .menus{
+    .headerMenu{
       display: none;
     }
     #menuDropdown{

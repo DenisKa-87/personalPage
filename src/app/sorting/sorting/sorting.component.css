@@ -1,0 +1,7 @@
+table{
+    width: 100%;
+}
+td{
+    min-width: 2%;
+    aspect-ratio: 2/1;
+}

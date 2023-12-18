@@ -1,0 +1,29 @@
+<div class="postContainer">
+    <div class="gridContainer">
+        <table>
+            <tr class="datarow" *ngFor="let row of createRange(field.height); let rowIndex = index">
+                <td class="node" *ngFor="let row of createRange(field.width); let colIndex = index"
+                [ngStyle]="
+                (rowIndex >= field.height - array[colIndex]) && { 'background-color': 'blue'}
+                "
+                >
+                </td>
+            </tr>
+        </table>
+        <div class = menus>
+            <select  #typeSelect [(ngModel)]="type" (change)="changeType(typeSelect.value)">
+                <option value="bubble">Bubble sort</option>
+                <option value="selection">Selection sort</option>
+                <!-- <option value="merge">Merge sort</option> -->
+            </select>
+            <label for="delaySelect">Choose speed:</label>
+            <select  #delaySelect [(ngModel)]="delay" (change)="changeDelay(delaySelect.value)">
+                <option value="50">Fast</option>
+                <option value="250">Medium</option>
+                <option value="500">Slow</option>
+            </select>
+            <button class="btn btn-primary" (click)="sort(type)">Sort</button>
+            <button class="btn btn-danger" (click)="shuffle()">Shuffle</button>
+        </div>
+    </div>
+</div>

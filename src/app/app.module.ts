@@ -17,6 +17,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BsDatepickerModule, BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { BsDropdownModule,BsDropdownConfig } from 'ngx-bootstrap/dropdown';
+import { ListOfSoftwareProjectsComponent } from './list-of-software-projects/list-of-software-projects.component';
+import { SortingComponent } from './sorting/sorting/sorting.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { BsDropdownModule,BsDropdownConfig } from 'ngx-bootstrap/dropdown';
     FooterComponent,
     PathFindingComponent,
     VisualizeComponent,
-    InprogressComponent
+    InprogressComponent,
+    ListOfSoftwareProjectsComponent,
+    SortingComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,8 @@
     height: 15vh;
     background-color: rgb(42, 46, 49);
     position: absolute;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
